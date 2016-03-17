@@ -40,26 +40,6 @@ module Instagram
         response
       end
 
-      # Returns a list of the overall most popular media
-      #
-      # @overload media_popular(options={})
-      #   @param options [Hash] A customizable set of options.
-      #   @return [Hashie::Mash]
-      #   @example Returns a list of the overall most popular media
-      #     Instagram.media_popular
-      # @see http://instagram.com/developer/endpoints/media/#get_media_popular
-      # @format :json
-      # @authenticated false unless requesting it from a protected user
-      #
-      #   If getting this data of a protected user, you must authenticate (and be allowed to see that user).
-      # @rate_limited true
-      def media_popular(*args)
-        options = args.last.is_a?(Hash) ? args.pop : {}
-        id = args.first || "self"
-        response = get("media/popular", options)
-        response
-      end
-
       # Returns media items within proximity of given lat,lng
       #
       # @param lat [String] A given latitude in decimal format

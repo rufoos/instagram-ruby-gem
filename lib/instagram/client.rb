@@ -11,7 +11,6 @@ module Instagram
     include Instagram::Client::Users
     include Instagram::Client::Media
     include Instagram::Client::Locations
-    include Instagram::Client::Geographies
     include Instagram::Client::Tags
     include Instagram::Client::Comments
     include Instagram::Client::Likes
